@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <!-- external Css  -->
+    <link rel="stylesheet" href="Styles/style.css" />
+    <!-- Tailwind and Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome cdn  -->
+    <script
+      src="https://kit.fontawesome.com/c636c59a4d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom tailwind css  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header
+      class="flex flex-col justify-center items-center gap-5 my-9 font-roboto"
+    >
+      <h1 class="text-3xl font-extrabold">To Do App</h1>
+      <!-- input section  -->
+      <div class="w-2/5 mx-auto max-sm:w-2/3">
+        <label
+          class="input input-bordered flex items-center gap-2 lgpy-5 lg:py-7 rounded-3xl outline-none"
+        >
+          <input
+            id="taskInputValue"
+            type="text"
+            class="grow border-none outline-none"
+            placeholder="Add a Task"
+          />
+          <button id="add-btn" class="btn bg-[#9195F6] text-white rounded-3xl">
+            Add Task
+          </button>
+        </label>
+      </div>
+    </header>
+    <main>
+      <!-- task adding box  -->
+      <div
+        class="bg-[#B7C9F2] p-5 max-sm:w-4/5 mx-auto rounded-xl font-roboto w-3/6 text-white"
+      >
+        <p class="font-black text-2xl text-[#FB88B4]">Your Task</p>
+        <ol
+          id="task-container"
+          class="list-decimal px-5 pt-5 text-xl flex flex-col gap-3"
+        >
+          <div id="task" class="flex justify-between items-center hidden">
+            <li class="text-red-400 font-medium">Task</li>
+            <i
+              id="deleteTask"
+              class="fa-solid fa-trash text-red-600 cursor-pointer hover:shadow-md shadow-gray-300"
+            ></i>
+          </div>
+        </ol>
+      </div>
+    </main>
+    <footer></footer>
+    <!-- external JS link  -->
+    <script src="Js/script.js"></script>
+  </body>
+</html>

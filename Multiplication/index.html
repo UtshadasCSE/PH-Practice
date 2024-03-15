@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication Quiz</title>
+    <!-- tailwind and daisy ui cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="h-screen bg-[#240A34] flex justify-center items-center">
+      <form
+        action=""
+        id="form"
+        class="flex flex-col gap-5 p-8 bg-[#891652] text-white font-roboto rounded-lg"
+      >
+        <h4 id="score" class="text-xl font-medium">Score:0</h4>
+        <h2 id="questionText" class="font-bold text-2xl"></h2>
+        <input
+          id="inputField"
+          class="py-3 px-4 brightness-75 rounded-sm text-red-600"
+          type="number"
+          placeholder="Enter your answer"
+        />
+        <button
+          class="btn bg-[#EABE6C] font-bold text-white text-xl hover:bg-[#FFEDD8] hover:text-[#EABE6C] hover:shadow-lg hover:shadow-zinc-100 duration-700"
+        >
+          Submit
+        </button>
+        <div class="flex justify-center items-center font-semibold">
+          <p>Developed by Utsha</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- conect with external js  -->
+    <script src="Js/script.js"></script>
+  </body>
+</html>
