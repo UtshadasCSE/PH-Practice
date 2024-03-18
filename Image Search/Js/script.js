@@ -22,12 +22,12 @@ const showDataDisplay = (datas) => {
 
   containerData.textContent = "";
 
-  datas.slice(0, 9).forEach((element) => {
+  datas.slice(0, 6).forEach((element) => {
     const underContainerDiv = document.createElement("div");
     underContainerDiv.innerHTML = `
             <div class="flex w-full flex-col gap-4 ">
             <img
-              class="w-[100%] h-[200px]  rounded-xl shadow-2xl shadow-[#535C91]"
+              class="w-[100%]  h-[200px]  rounded-xl shadow-2xl shadow-[#535C91]"
               src="${element.urls.small}"
               alt=""
             />
